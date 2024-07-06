@@ -1,4 +1,5 @@
-from models.rnn import SimpleRNN
+from models.simple_rnn import SimpleRNN
+from models.enhanced_rnn import EnhancedRNN
 
 import torch
 import torch.nn as nn
@@ -14,7 +15,7 @@ if __name__ == "__main__":
     batch_size = 32
 
     # Instantiate the model
-    model = SimpleRNN(input_size, hidden_size, output_size)
+    model = EnhancedRNN(input_size, hidden_size, output_size)
 
     # Create Sample data
     x = torch.randn(batch_size, sequence_length, input_size)
